@@ -26,7 +26,7 @@ public static class CadastrarPessoa
     {
         try
         {
-            var repositorio = new Repositorio<Pessoa>(Database.Connection);
+            var repositorio = new Repositorio<Pessoa>(Database.Connection!);
             repositorio.Create(pessoa);
             Console.WriteLine("Usuário Cadastrado com Sucesso!");
         }

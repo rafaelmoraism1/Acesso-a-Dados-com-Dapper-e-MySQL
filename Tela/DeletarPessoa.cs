@@ -10,7 +10,7 @@ namespace AcessoMySQL.Tela
             Console.Clear();
             Console.WriteLine("Deletar Pessoa");
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Digite o nome da Pessoa que deseja Excluir: ");
+            Console.WriteLine("Digite o Id da Pessoa que deseja Excluir: ");
             var id = Console.ReadLine()!;
 
             Delete(int.Parse(id));
@@ -23,7 +23,7 @@ namespace AcessoMySQL.Tela
         {
             try
             {
-                var repositorio = new Repositorio<Pessoa>(Database.Connection);
+                var repositorio = new Repositorio<Pessoa>(Database.Connection!);
                 repositorio.Delete(id);
                 Console.WriteLine("Usuário Excluído com Sucesso!");
             }

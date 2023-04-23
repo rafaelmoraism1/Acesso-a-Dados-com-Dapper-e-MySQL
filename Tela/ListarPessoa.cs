@@ -16,7 +16,7 @@ namespace AcessoMySQL.Model
 
         private static void List()
         {
-            var repositorio = new Repositorio<Pessoa>(Database.Connection);
+            var repositorio = new Repositorio<Pessoa>(Database.Connection!);
 
             var pessoas = repositorio.Get();
             foreach (var item in pessoas)

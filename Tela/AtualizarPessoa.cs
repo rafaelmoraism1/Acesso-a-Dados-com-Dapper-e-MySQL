@@ -30,7 +30,7 @@ namespace AcessoMySQL.Tela
         {
             try
             {
-                var repositorio = new Repositorio<Pessoa>(Database.Connection);
+                var repositorio = new Repositorio<Pessoa>(Database.Connection!);
                 repositorio.Update(pessoa);
                 Console.WriteLine("Usuário atualizado com Sucesso!");
             }
