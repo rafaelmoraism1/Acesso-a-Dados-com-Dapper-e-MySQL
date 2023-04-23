@@ -4,7 +4,6 @@ namespace AcessoMySQL
 {
     public static class Database
     {
-        public static MySqlConnection Connection;
+        public static MySqlConnection? Connection;
     }
-
 }
